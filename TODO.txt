@@ -1,1 +1,2 @@
 
+-> Read abouty difference between navigate and Link in react. and in general learn about react routing 
