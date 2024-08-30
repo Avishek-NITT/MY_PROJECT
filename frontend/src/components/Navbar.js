@@ -30,7 +30,7 @@ function Navbar() {
 
                 <div>
                     <Link className="btn btn-outline-success my-2 my-sm-0 mr-sm-2" to="/login">Login</Link>
-                    <Link className="btn btn-outline-success my-2 my-sm-0 mr-sm-2" to="/">Signup</Link> 
+                    <Link className="btn btn-outline-success my-2 my-sm-0 mr-sm-2" to="/signup">Signup</Link> 
                 </div>
 
             </nav>

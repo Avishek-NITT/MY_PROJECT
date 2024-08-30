@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './screens/Login';
+import Signup from './screens/Signup';
 import Home from './screens/Home'; // Import any other components you want to render at different routes
 
 import reportWebVitals from './reportWebVitals';
@@ -14,6 +15,7 @@ root.render(
       <Routes>
         <Route path="/" element={<Home />} /> 
         <Route path="/login" element={<Login />} /> 
+        <Route path="/signup" element={<Signup />} /> 
       </Routes>
     </Router>
   </React.StrictMode>
