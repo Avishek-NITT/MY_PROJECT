@@ -1,18 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 
 function Navbar() {
 
-    const navigate = useNavigate();
-
-    const login_route = () => {
-        navigate('/login');
-    };
-
-    const home_route = () => {
-        navigate('/');
-    }
+    
 
 
     return (  //This is a navbar
@@ -26,17 +19,18 @@ function Navbar() {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item active">
-                            <button className="btn border-0" onClick={home_route}>Home </button>
+                            {/* <button className="btn border-0" onClick={home_route}>Home </button> */}
+                            <Link className="btn border-0" to="/">Home</Link>
                         </li>
                         <li className="nav-item">
-                            <button className="btn" href="#">TEMP BTTN</button>
+                            <Link className="btn border-0" to="/">Temp</Link>
                         </li>
                     </ul>
                  </div>
 
                 <div>
-                    <button className="btn btn-outline-success my-2 my-sm-0 mr-sm-2" type="submit" onClick={login_route}>Log in</button>
-                    <button className="btn btn-outline-success my-2 my-sm-0 mr-sm-2" type="submit">Sign up</button>
+                    <Link className="btn btn-outline-success my-2 my-sm-0 mr-sm-2" to="/login">Login</Link>
+                    <Link className="btn btn-outline-success my-2 my-sm-0 mr-sm-2" to="/">Signup</Link> 
                 </div>
 
             </nav>
