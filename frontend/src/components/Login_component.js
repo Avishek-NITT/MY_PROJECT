@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 
 
-function Login_Comp(){
+function Login_Comp({setIsLoggedIn}){
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -12,6 +12,7 @@ function Login_Comp(){
     const handleclick = () =>{
         console.log(email);
         console.log(password);
+        setIsLoggedIn(true);
     }
 
     return (
