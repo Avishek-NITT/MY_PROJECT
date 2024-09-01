@@ -3,7 +3,7 @@ version: "3.8"
 services:
   frontend:
     build:
-      context: ./
+      context: ./frontend
       dockerfile: Dockerfile.frontend
     ports:
       - "3000:3000"
@@ -16,8 +16,8 @@ services:
   #     dockerfile: Dockerfile.backend
   #   ports:
   #     - "5000:5000"
-  #   depends_on:
-  #     - mongo
+    # depends_on:
+    #   - mongo
 
   # mongo:
   #   image: mongo:latest
