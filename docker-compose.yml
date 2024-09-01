@@ -1,6 +1,30 @@
-version: '3.8'
+version: "3.8"
+
 services:
-  myapp:
-    build: .
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.frontend
     ports:
       - "3000:3000"
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.backend
+    ports:
+      - "5000:5000"
+    depends_on:
+      - database
+
+  database:
+    build:
+      context: ./database
+      dockerfile: Dockerfile.database
+    ports:
+      - "27017:27017"
+
+
+
