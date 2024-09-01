@@ -16,14 +16,15 @@ services:
       dockerfile: Dockerfile.backend
     ports:
       - "5000:5000"
-    # depends_on:
-    #   - mongo
+    depends_on:
+      - database
 
-  # mongo:
-  #   image: mongo:latest
-  #   ports:
-  #     - "27017:27017"
-  #   volumes:
-  #     - mongo-data:/data/db
+  database:
+    build:
+      context: ./database
+      dockerfile: Dockerfile.database
+    ports:
+      - "27017:27017"
+
 
 
