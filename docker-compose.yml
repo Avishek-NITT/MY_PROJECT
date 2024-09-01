@@ -1,6 +1,29 @@
-version: '3.8'
+version: "3.8"
+
 services:
-  myapp:
-    build: .
+  frontend:
+    build:
+      context: ./
+      dockerfile: Dockerfile.frontend
     ports:
       - "3000:3000"
+  #   depends_on:
+  #     - backend
+
+  # backend:
+  #   build:
+  #     context: ./backend
+  #     dockerfile: Dockerfile.backend
+  #   ports:
+  #     - "5000:5000"
+  #   depends_on:
+  #     - mongo
+
+  # mongo:
+  #   image: mongo:latest
+  #   ports:
+  #     - "27017:27017"
+  #   volumes:
+  #     - mongo-data:/data/db
+
+
