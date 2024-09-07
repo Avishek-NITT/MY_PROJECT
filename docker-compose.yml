@@ -18,11 +18,13 @@ services:
       - "5000:5000"
     depends_on:
       - database
-
+  
   database:
     build:
-      context: ./database
-      dockerfile: Dockerfile.database
+      context: ./database                  
+      dockerfile: Dockerfile.database 
+    image: my-database-image       
+    container_name: my-database-container
     ports:
       - "27017:27017"
 

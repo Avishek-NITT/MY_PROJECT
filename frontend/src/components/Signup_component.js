@@ -9,10 +9,21 @@ function Signup_comp(){
     const [password, setPassword] = useState('');
 
 
-    const handleclick = () =>{
-        console.log(userName);
-        console.log(email);
-        console.log(password);
+    const handleclick = async(e) =>{
+        
+        const response = await fetch('http://localhost:5000/signup', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ userName, password, email }),
+        });
+        const data = await response.json();
+        if (data.success) {
+            alert('Signup successful!');
+        } else {
+            alert('Signup failed!');
+        }
     }
 
     return (
