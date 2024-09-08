@@ -1,4 +1,4 @@
-cd ..
+
 
 docker stop my-database-container
 

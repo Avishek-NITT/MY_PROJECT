@@ -19,11 +19,12 @@ function Signup_comp(){
             body: JSON.stringify({ userName, password, email }),
         });
         const data = await response.json();
-        if (data.success) {
-            alert('Signup successful!');
-        } else {
-            alert('Signup failed!');
-        }
+        // if (data.success) {
+        //     alert('Signup successful!');
+        // } else {
+        //     alert('Signup failed!');
+        // }
+        console.log(data)
     }
 
     return (
